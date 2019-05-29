@@ -7,25 +7,24 @@ import (
 //var result []string
 func generateParenthesis(n int) []string {
 	var result []string
-	generate(&result,"",0,0,n)
+	generate(&result, "", 0, 0, n)
 	return result
 }
 
-func generate(result *[]string,temp string,open ,close,max int) {
+func generate(result *[]string, temp string, open, close, max int) {
 	if len(temp) == 2*max {
-		*result = append(*result,temp)
+		*result = append(*result, temp)
 		return
 	}
 	if open < max {
-		generate(result,temp+"(",open+1,close,max)
+		generate(result, temp+"(", open+1, close, max)
 	}
 	if close < open {
-		generate(result,temp+")",open,close+1,max)
+		generate(result, temp+")", open, close+1, max)
 	}
 }
 
-
-func main(){
+func main() {
 	n := 3
 	fmt.Println(generateParenthesis(n))
 
