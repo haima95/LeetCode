@@ -52,6 +52,6 @@ func main() {
 	// s := "27"   // 1
 	// s := "0" // 0
 	// s := "12"   // 2
-	s := "226"
+	// s := "226"
 	fmt.Println(numDecodings(s))
 }
