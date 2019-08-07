@@ -37,12 +37,15 @@ func generateTreesHelper(left, right int) []*TreeNode {
 }
 
 func main() {
-	n := 4
-	r := generateTrees(n)
-	for _, v := range r {
-		print(v)
-		fmt.Println()
+	//n := 4
+	for i := 0; i < 10; i++ {
+		r := generateTrees(i)
+		fmt.Println(len(r))
 	}
+	//for _, v := range r {
+	//	print(v)
+	//	fmt.Println()
+	//}
 }
 
 func print(root *TreeNode) {
